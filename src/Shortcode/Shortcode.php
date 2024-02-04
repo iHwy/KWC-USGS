@@ -72,7 +72,7 @@ class Shortcode {
 				return '';
 			}
 
-			set_transient( 'kwc_usgs-' . md5( $this->location ), $response, MINUTE_IN_SECONDS * 60 );
+			set_transient( 'kwc_usgs-' . md5( $this->location ), $response, MINUTE_IN_SECONDS * 5 );
 		}
 
 		$data = str_replace( 'ns1:', '', $response['body'] );
